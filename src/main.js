@@ -1,5 +1,12 @@
 // src/main.js
-import foo from './foo.js';
-export default function () {
-  console.log(foo);
-}
+import { version } from '../package.json';
+
+import axios from 'axios';
+
+const show = () => {
+  console.log('version ' + version, axios);
+};
+
+show();
+
+export default show;
