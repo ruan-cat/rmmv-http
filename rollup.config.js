@@ -18,14 +18,18 @@ export default {
   // dir: path.resolve(__dirname, 'dist/esm'),
   output: [
     {
-      file: './dist/res.umd.js',
+      file: './dist/rmmv-http.js',
       format: 'umd',
-      name: 'MyBundle',
+      name: 'RmmvHttp',
       exports: 'named',
       intro: '/* this is a library */',
       compact: true,
       extend: true,
       banner,
+
+      globals: {
+        PluginManager: 'PluginManager',
+      },
     },
   ],
 
