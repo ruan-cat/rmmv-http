@@ -1,7 +1,10 @@
 import { version } from './package.json';
+
 import json from 'rollup-plugin-json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import flow from 'rollup-plugin-flow-no-whitespace';
+
 const banner = `/*!
   * rmmv-http v${version}
   * (c) ${new Date().getFullYear()} 阮中楠
@@ -38,7 +41,7 @@ export default {
     // }),
 
     nodeResolve({ browser: true }),
-
     commonjs(),
+    flow(),
   ],
 };

@@ -18,6 +18,7 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "lodash": "^4.17.21",
     "rollup": "^2.78.0",
+    "rollup-plugin-flow-no-whitespace": "^1.0.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-polyfill-node": "^0.10.2"
   }
