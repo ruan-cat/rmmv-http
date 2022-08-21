@@ -1,8 +1,9 @@
 import { version } from './package.json';
 
-import json from 'rollup-plugin-json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
+import json from 'rollup-plugin-json';
 import flow from 'rollup-plugin-flow-no-whitespace';
 
 const banner = `/*!
@@ -29,8 +30,6 @@ export default {
   ],
 
   plugins: [
-    json(),
-
     // import resolve from 'rollup-plugin-node-resolve';
     // https://www.cnblogs.com/tugenhua0707/p/8179686.html
     // resolve({
@@ -41,7 +40,12 @@ export default {
     // }),
 
     nodeResolve({ browser: true }),
+    babel({
+      babelHelpers: 'bundled',
+      exclude: 'node_modules/**',
+    }),
     commonjs(),
+    json(),
     flow(),
   ],
 };
