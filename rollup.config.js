@@ -1,3 +1,8 @@
+/** 目前有很多配置是模仿vue-router来配置的 并没有很严格的跟着其他的教程来做
+ *
+ * 目前绝大多数的依赖包均参考别人的教程 但是实际安装的时候还是参考至github官方提供的插件文档
+ */
+
 import { version } from './package.json';
 
 import { nodeResolve } from '@rollup/plugin-node-resolve';
