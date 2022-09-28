@@ -24,7 +24,10 @@ export default {
   output: [
     {
       file: './dist/rmmv-http.js',
-      format: 'umd',
+      // format: 'umd',
+
+      // 临时变更为esm模块模式
+      format: 'esm',
       name: 'RmmvHttp',
       exports: 'named',
       intro: '/* this is a library */',
