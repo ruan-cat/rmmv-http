@@ -11,11 +11,13 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from 'rollup-plugin-json';
 import flow from 'rollup-plugin-flow-no-whitespace';
 
-const banner = `/*!
-  * rmmv-http v${version}
-  * (c) ${new Date().getFullYear()} 阮中楠
-  * @license MIT
-  */`;
+const banner = `
+/*!
+ * rmmv-http v${version}
+ * (c) ${new Date().getFullYear()} 阮中楠
+ * @license MIT
+ */
+`;
 
 export default {
   input: 'src/main.js',
